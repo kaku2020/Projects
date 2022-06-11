@@ -2,6 +2,7 @@
 import logo from './amazon.png';
 import './App.css';
 import Header from './Header.js';
+import Home from './Home';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="app">
      
       <Header />
+      <Home />
       {/*Header*/}
       {/*Home*/}
       {/* <header className="App-header">
