@@ -1,9 +1,10 @@
+import { type } from '@testing-library/user-event/dist/type';
 import React from 'react';
 import "./Product.css";
 import { useStateValue } from './StateProvider';
 
 function Product({id,title, image, price, rating}) {
-    const[{basket}, dispatch] = useStateValue();
+    const[{ basket }, dispatch] = useStateValue();
 
     console.log("this is basket >>>>>", basket);
 
@@ -12,15 +13,16 @@ function Product({id,title, image, price, rating}) {
         //dispatch the items into the data layer,
         dispatch({
             type: "ADD_TO_BASKET",
-            items: {
-                id:id,
-                title:title,
-                image:image,
-                price:price,
-                rating:rating,
+            item : {
+                id :id,
+                title :title,
+                image :image,
+                price :price,
+                rating :rating,
 
-            },
+            }
         });
+        
     };
 
   return (
